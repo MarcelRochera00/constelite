@@ -23,10 +23,3 @@ Things you may want to cover:
 
 * ...
 
-
-
-pg_ctl -D /home/marcel/miniconda3/pgdata -l logfile start
-
-rails server
-
-npm run dev
