@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import AddBookForm from './AddBookForm'   // 👈 nuevo
+import ConstelationCanvas from './ConstelationCanvas'   // 👈 nuevo
+import './App.css'
 
 function App() {
   const [books, setBooks] = useState([])
@@ -23,7 +25,8 @@ function App() {
       <h1>Mis libros</h1>
 
       <AddBookForm onBookAdded={handleBookAdded} />  {/* 👈 nuevo */}
-
+      <ConstelationCanvas></ConstelationCanvas>
+      {error && <p>{error}</p>}
       <ul>
         {books.map(book => (
           <li key={book.id}>
