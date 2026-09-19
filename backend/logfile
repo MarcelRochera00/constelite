@@ -1,0 +1,26 @@
+2026-09-19 12:08:47.234 CEST [21344] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-19 12:08:47.235 CEST [21344] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-19 12:08:47.236 CEST [21344] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-19 12:08:47.240 CEST [21350] LOG:  database system was shut down at 2026-09-19 12:08:33 CEST
+2026-09-19 12:08:47.242 CEST [21344] LOG:  database system is ready to accept connections
+2026-09-19 12:13:47.261 CEST [21348] LOG:  checkpoint starting: time
+2026-09-19 12:18:17.061 CEST [21348] LOG:  checkpoint complete: wrote 2893 buffers (17.7%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=269.727 s, sync=0.059 s, total=269.801 s; sync files=933, longest=0.013 s, average=0.001 s; distance=13551 kB, estimate=13551 kB; lsn=0/24AA438, redo lsn=0/24A6250
+2026-09-19 12:33:47.393 CEST [21348] LOG:  checkpoint starting: time
+2026-09-19 12:33:48.428 CEST [21348] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.014 s, total=1.035 s; sync files=9, longest=0.012 s, average=0.002 s; distance=37 kB, estimate=12200 kB; lsn=0/24AFA80, redo lsn=0/24AFA28
+2026-09-19 12:38:47.527 CEST [21348] LOG:  checkpoint starting: time
+2026-09-19 12:38:49.242 CEST [21348] LOG:  checkpoint complete: wrote 17 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.705 s, sync=0.002 s, total=1.715 s; sync files=13, longest=0.002 s, average=0.001 s; distance=6 kB, estimate=10980 kB; lsn=0/24B1488, redo lsn=0/24B1430
+2026-09-19 14:46:09.647 CEST [7240] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-19 14:46:09.648 CEST [7240] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-19 14:46:09.649 CEST [7240] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-19 14:46:09.660 CEST [7246] LOG:  database system was interrupted; last known up at 2026-09-19 12:38:49 CEST
+2026-09-19 14:46:09.824 CEST [7246] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-09-19 14:46:09.827 CEST [7246] LOG:  redo starts at 0/24B1430
+2026-09-19 14:46:09.827 CEST [7246] LOG:  invalid record length at 0/24B1538: expected at least 24, got 0
+2026-09-19 14:46:09.827 CEST [7246] LOG:  redo done at 0/24B1500 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-09-19 14:46:09.832 CEST [7244] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-09-19 14:46:09.838 CEST [7244] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.008 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/24B1538, redo lsn=0/24B1538
+2026-09-19 14:46:09.843 CEST [7240] LOG:  database system is ready to accept connections
+2026-09-19 14:51:09.898 CEST [7244] LOG:  checkpoint starting: time
+2026-09-19 14:51:10.016 CEST [7244] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.002 s, total=0.119 s; sync files=1, longest=0.002 s, average=0.002 s; distance=8 kB, estimate=8 kB; lsn=0/24B3698, redo lsn=0/24B3640
+2026-09-19 15:01:09.207 CEST [7244] LOG:  checkpoint starting: time
+2026-09-19 15:01:09.738 CEST [7244] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.014 s, total=0.531 s; sync files=6, longest=0.013 s, average=0.003 s; distance=2 kB, estimate=7 kB; lsn=0/24B3F28, redo lsn=0/24B3ED0
