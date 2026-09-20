@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  constellation: one
+  quote: one
+  status: 1
+  confidence_score: 1.5
+
+two:
+  constellation: two
+  quote: two
+  status: 1
+  confidence_score: 1.5

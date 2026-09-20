@@ -9,7 +9,15 @@ Rails.application.routes.draw do
     resources :books
     resources :quotes
     resources :authors
+    resources :constellations do
+      collection do
+        get :graph
+      end
+    end
+    resources :constellation_quotes
   end
+
+  
 
   # Defines the root path route ("/")
   # root "posts#index"

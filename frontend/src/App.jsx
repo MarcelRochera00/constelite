@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import AddBookForm from './AddBookForm'   // 👈 nuevo
-import ConstelationCanvas from './ConstelationCanvas'   // 👈 nuevo
+import ConstellationCanvas from './ConstellationCanvas'   // 👈 nuevo
 import './App.css'
 
 function App() {
@@ -21,19 +21,11 @@ function App() {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <div>
-      <h1>Mis libros</h1>
+    <div className="app-container">
 
-      <AddBookForm onBookAdded={handleBookAdded} />  {/* 👈 nuevo */}
-      <ConstelationCanvas></ConstelationCanvas>
+      <ConstellationCanvas className="constellation-canvas"></ConstellationCanvas>
       {error && <p>{error}</p>}
-      <ul>
-        {books.map(book => (
-          <li key={book.id}>
-            {book.title} — {book.author?.name}
-          </li>
-        ))}
-      </ul>
+
     </div>
   )
 }
