@@ -44,18 +44,18 @@ culpa_sin_causa = Constellation.create!(
 
 ConstellationQuote.create!(constellation: miedo, quote: q1, status: :confirmed)
 ConstellationQuote.create!(constellation: miedo, quote: q2, status: :confirmed)
-ConstellationQuote.create!(constellation: miedo, quote: q3, status: :suggested, confidence_score: 0.78)
+ConstellationQuote.create!(constellation: miedo, quote: q3, status: :confirmed)
 
 ConstellationQuote.create!(constellation: culpa_sin_causa, quote: q9, status: :confirmed)
 ConstellationQuote.create!(constellation: culpa_sin_causa, quote: q4, status: :confirmed)
-ConstellationQuote.create!(constellation: culpa_sin_causa, quote: q5, status: :suggested, confidence_score: 0.65)
+ConstellationQuote.create!(constellation: culpa_sin_causa, quote: q5, status: :confirmed)
 
 puts "Constelaciones: #{Constellation.count}, ConstellationQuotes: #{ConstellationQuote.count}"
 
 QuoteLink.create!(quote_a: q1, quote_b: q2)
+QuoteLink.create!(quote_a: q1, quote_b: q3)
 QuoteLink.create!(quote_a: q9, quote_b: q4)
-QuoteLink.create!(quote_a: q9, quote_b: q3)
-QuoteLink.create!(quote_a: q3, quote_b: q4)
-QuoteLink.create!(quote_a: q1, quote_b: q5)
+QuoteLink.create!(quote_a: q9, quote_b: q5)
+
 
 puts "QuoteLinks: #{QuoteLink.count}"
