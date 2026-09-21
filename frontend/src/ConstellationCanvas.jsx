@@ -35,7 +35,7 @@ function ConstellationCanvas() {
             nodeLabel={node => node.name}
             cooldownTime={Infinity}
             graphData={quoteData}
-            backgroundColor='#0a0a1a'
+            backgroundColor='rgba(0,0,0,0)'
             nodeCanvasObject={(node, ctx, globalScale) => {
                 if (node.x === undefined || node.y === undefined) return
 
@@ -137,7 +137,7 @@ function ConstellationCanvas() {
 
                 if (clicked) {
                     isZooming.current = true
-                    fgRef.current.zoomToFit(1000, 500, node => clicked.constellation.quote_ids.includes(node.id))
+                    fgRef.current.zoomToFit(1500, 500, node => clicked.constellation.quote_ids.includes(node.id))
                     setTimeout(() => { isZooming.current = false }, 1000)
                 }
             }}

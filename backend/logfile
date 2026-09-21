@@ -82,3 +82,16 @@
 2026-09-20 20:30:53.212 CEST [5096] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.001 s, total=0.118 s; sync files=1, longest=0.001 s, average=0.001 s; distance=7 kB, estimate=179 kB; lsn=0/25B2FD0, redo lsn=0/25B2F78
 2026-09-20 20:55:53.656 CEST [5096] LOG:  checkpoint starting: time
 2026-09-20 20:55:56.997 CEST [5096] LOG:  checkpoint complete: wrote 33 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=3.312 s, sync=0.015 s, total=3.341 s; sync files=30, longest=0.013 s, average=0.001 s; distance=90 kB, estimate=170 kB; lsn=0/25C9AF0, redo lsn=0/25C9A98
+2026-09-21 19:27:08.872 CEST [3700] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-21 19:27:08.873 CEST [3700] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-21 19:27:08.874 CEST [3700] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-21 19:27:08.884 CEST [3706] LOG:  database system was interrupted; last known up at 2026-09-20 20:55:56 CEST
+2026-09-21 19:27:09.033 CEST [3706] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-09-21 19:27:09.038 CEST [3706] LOG:  redo starts at 0/25C9A98
+2026-09-21 19:27:09.038 CEST [3706] LOG:  invalid record length at 0/25C9BA0: expected at least 24, got 0
+2026-09-21 19:27:09.038 CEST [3706] LOG:  redo done at 0/25C9B68 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-09-21 19:27:09.043 CEST [3704] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-09-21 19:27:09.049 CEST [3704] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/25C9BA0, redo lsn=0/25C9BA0
+2026-09-21 19:27:09.051 CEST [3700] LOG:  database system is ready to accept connections
+2026-09-21 19:52:09.518 CEST [3704] LOG:  checkpoint starting: time
+2026-09-21 19:52:12.058 CEST [3704] LOG:  checkpoint complete: wrote 25 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=2.521 s, sync=0.003 s, total=2.541 s; sync files=25, longest=0.001 s, average=0.001 s; distance=38 kB, estimate=38 kB; lsn=0/25D37C0, redo lsn=0/25D3768

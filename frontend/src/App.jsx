@@ -22,10 +22,11 @@ function App() {
 
   return (
     <div className="app-container">
-
-      <ConstellationCanvas className="constellation-canvas"></ConstellationCanvas>
-      {error && <p>{error}</p>}
-
+      <div className="app-title">CONSTELITE</div>
+      <div className="constellation-canvas-wrapper">
+        <ConstellationCanvas className="constellation-canvas"></ConstellationCanvas>
+        {error && <p>{error}</p>}
+      </div>
     </div>
   )
 }

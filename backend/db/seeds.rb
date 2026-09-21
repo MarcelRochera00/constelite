@@ -11,6 +11,10 @@ kafka = Author.create!(name: "Franz Kafka")
 dostoievski = Author.create!(name: "Fiódor Dostoievski")
 camus = Author.create!(name: "Albert Camus")
 
+julian_barnes = Author.create!(name: "Julian Barnes")
+john_berger = Author.create!(name: "John Berger")
+
+
 proceso = Book.create!(title: "El proceso", author: kafka, themes: "burocracia, culpa, absurdo")
 metamorfosis = Book.create!(title: "La metamorfosis", author: kafka, themes: "alienación, identidad, familia")
 castillo = Book.create!(title: "El castillo", author: kafka, themes: "burocracia, pertenencia, absurdo")
@@ -18,6 +22,9 @@ crimen_castigo = Book.create!(title: "Crimen y castigo", author: dostoievski, th
 hermanos_karamazov = Book.create!(title: "Los hermanos Karamázov", author: dostoievski, themes: "fe, libertad, familia")
 extranjero = Book.create!(title: "El extranjero", author: camus, themes: "absurdo, indiferencia, muerte")
 mito_sisifo = Book.create!(title: "El mito de Sísifo", author: camus, themes: "absurdo, libertad, rebeldía")
+
+el_sentido_de_un_final = Book.create!(title: "El msentido de un final", author: julian_barnes, themes: "recuerdos, libertad, verdad")
+aqui_nos_vemos = Book.create!(title: "Aquí nos vemos", author: john_berger, themes: "recuerdos, olvido, verdad")
 
 q1 = Quote.create!(text: "Alguien había hablado mal de él, porque sin haber hecho nada malo fue arrestado una mañana.", book: proceso, themes: "culpa, absurdo")
 q2 = Quote.create!(text: "Despertó convertido en algo que ya no reconocía, y el mundo a su alrededor tampoco lo reconoció a él.", book: metamorfosis, themes: "identidad, transformación")
@@ -29,6 +36,9 @@ q7 = Quote.create!(text: "Hay un solo problema filosófico verdaderamente serio,
 q8 = Quote.create!(text: "Hay que imaginarse feliz a quien empuja la roca, aunque nunca llegue a la cima.", book: mito_sisifo, themes: "rebeldía, absurdo")
 q9 = Quote.create!(text: "No era culpable de nada, y sin embargo la culpa lo perseguía como una sombra propia.", book: proceso, themes: "culpa, absurdo")
 q10 = Quote.create!(text: "La familia entera aprendió a vivir con la puerta cerrada, fingiendo que dentro no había nadie distinto.", book: metamorfosis, themes: "familia, alienación")
+
+q11 = Quote.create!(text: "Lo que acabas recordando no es siempre lo mismo que lo que has presenciado.", book: el_sentido_de_un_final, themes: "recuerdos, verdad, memoria")
+q12 = Quote.create!(text: "En una sola vida caben muchas vidas, y esa es la razón por la que tenemos que olvidar tanto", book: aqui_nos_vemos, themes: "recuerdos, olvido, verdad")
 
 puts "Seeds creados: #{Author.count} autores, #{Book.count} libros, #{Quote.count} frases"
 
