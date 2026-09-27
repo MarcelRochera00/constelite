@@ -21,7 +21,7 @@ function App() {
   }
 
   const handleQuoteAdded = (newQuote) => {
-    console.log('Quote añadida:', newQuote)
+    console.log('Quote added:', newQuote)
   }
 
   const clickAddQuote = () => {
@@ -41,7 +41,7 @@ function App() {
       </div>
 
       <button className="add-quote-button" onClick={clickAddQuote}>
-        + AÑADIR QUOTE
+        + NEW QUOTE
       </button>
 
       {activeOverlay === 'addQuote' && (

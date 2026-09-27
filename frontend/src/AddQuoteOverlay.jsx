@@ -2,12 +2,23 @@ import { useState } from 'react'
 
 function AddQuoteOverlay({ books, onQuoteAdded, onClose }) {
   const [text, setText] = useState('')
-  const [bookId, setBookId] = useState('')
+  const [bookQuery, setBookQuery] = useState('')
+  const [bookId, setBookId] = useState(null)
+  const [showSuggestions, setShowSuggestions] = useState(false)
   const [themes, setThemes] = useState('')
   const [error, setError] = useState(null)
 
+  const filteredBooks = books.filter(b =>
+    b.title.toLowerCase().includes(bookQuery.toLowerCase())
+  )
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (!bookId) {
+      setError('Selecciona un libro de la lista')
+      return
+    }
 
     fetch('http://localhost:3000/quotes', {
       method: 'POST',
@@ -23,7 +34,8 @@ function AddQuoteOverlay({ books, onQuoteAdded, onClose }) {
       .then(newQuote => {
         onQuoteAdded(newQuote)
         setText('')
-        setBookId('')
+        setBookQuery('')
+        setBookId(null)
         setThemes('')
         onClose()
       })
@@ -34,14 +46,44 @@ function AddQuoteOverlay({ books, onQuoteAdded, onClose }) {
     <div className="addQuoteOverlay">
       <form onSubmit={handleSubmit}>
         <textarea
-            value={text}
-            onChange={e => setText(e.target.value)}
-            placeholder="Quote"
-            rows={3}
+          value={text}
+          onChange={e => setText(e.target.value)}
+          placeholder="Quote"
+          rows={3}
         />
-        <input value={bookId} onChange={e => setBookId(e.target.value)} placeholder="ID del libro" />
-        <input value={themes} onChange={e => setThemes(e.target.value)} placeholder="Temas" />
-        <button type="submit">Añadir quote</button>
+
+        <div className="book-search">
+          <input
+            value={bookQuery}
+            onChange={e => {
+              setBookQuery(e.target.value)
+              setBookId(null)
+              setShowSuggestions(true)
+            }}
+            onFocus={() => setShowSuggestions(true)}
+            placeholder="Book title"
+          />
+
+          {showSuggestions && bookQuery && filteredBooks.length > 0 && (
+            <ul className="book-suggestions">
+              {filteredBooks.map(book => (
+                <li
+                  key={book.id}
+                  onClick={() => {
+                    setBookQuery(book.title)
+                    setBookId(book.id)
+                    setShowSuggestions(false)
+                  }}
+                >
+                  {book.title}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        <input value={themes} onChange={e => setThemes(e.target.value)} placeholder="Themes" />
+        <button type="submit">Add quote</button>
         <button type="button" onClick={onClose}>Cerrar</button>
         {error && <p>{error}</p>}
       </form>

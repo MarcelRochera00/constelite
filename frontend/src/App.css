@@ -121,10 +121,15 @@ div.float-tooltip-kap {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 
   color: white;
   font-size: 0.9rem;
   font-family: inherit;
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .addQuoteOverlay textarea {
@@ -132,11 +137,16 @@ div.float-tooltip-kap {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 
   color: white;
   font-size: 0.9rem;
   font-family: inherit;
   resize: vertical;
+
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .addQuoteOverlay textarea::placeholder {
@@ -189,4 +199,38 @@ div.float-tooltip-kap {
   color: #ff8080;
   font-size: 0.85rem;
   margin: 0;
+}
+
+.book-search {
+  position: relative;
+}
+
+.book-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 4px;
+
+  list-style: none;
+  padding: 4px;
+  max-height: 160px;
+  overflow-y: auto;
+
+  background: rgba(15, 15, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+}
+
+.book-suggestions li {
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.book-suggestions li:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
