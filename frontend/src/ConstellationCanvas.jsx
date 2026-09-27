@@ -38,10 +38,11 @@ function ConstellationCanvas() {
             backgroundColor='rgba(0,0,0,0)'
             nodeCanvasObject={(node, ctx, globalScale) => {
                 if (node.x === undefined || node.y === undefined) return
-
+                
+                // Node animation variables
                 const pulso = Math.sin(Date.now() * 0.002 + node.offset)
-                const glowRadius = (pulso + 1) * 1.5
-                const coreRadius = 1
+                const glowRadius = (pulso + 1) * 1.8
+                const coreRadius = 1.5
 
                 const glow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, glowRadius)
                 glow.addColorStop(0, 'rgba(255, 255, 255, 1)')
@@ -74,7 +75,7 @@ function ConstellationCanvas() {
                 ctx.moveTo(start.x, start.y)
                 ctx.lineTo(end.x, end.y)
                 ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)'
-                ctx.lineWidth = 0.8
+                ctx.lineWidth = 1.2
                 ctx.shadowColor = 'white'
                 ctx.shadowBlur = 6
                 ctx.stroke()
@@ -86,7 +87,7 @@ function ConstellationCanvas() {
                     if (isNaN(centro.x) || isNaN(centro.y)) return
 
                     const texto = constellation.title.toUpperCase()
-                    ctx.font = '300 11px sans-serif'
+                    ctx.font = '300 13px sans-serif'
                     const textWidth = ctx.measureText(texto).width
 
                     const paddingX = 14
@@ -111,7 +112,7 @@ function ConstellationCanvas() {
                     ctx.lineWidth = 0.6
                     ctx.stroke()
 
-                    ctx.font = '300 11px "Courier New", monospace'
+                    ctx.font = '300 12px "Courier New", monospace'
                     ctx.shadowColor = 'rgba(255, 255, 255, 0.8)'
                     ctx.shadowBlur = 8
                     ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'

@@ -43,3 +43,150 @@ div.float-tooltip-kap {
   z-index: 10;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.app-header {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+.add-quote-button {
+  position: fixed;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  animation: drift 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.add-quote-icon {
+  font-size: 1rem;
+  font-weight: 300;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.add-quote-button:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.addQuoteOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 5, 15, 0.75);
+  backdrop-filter: blur(1px);
+}
+
+.addQuoteOverlay form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 340px;
+  padding: 28px;
+
+  background: rgba(15, 15, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(80, 60, 140, 0.25);
+}
+
+.addQuoteOverlay input {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+
+  color: white;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.addQuoteOverlay textarea {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+
+  color: white;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.addQuoteOverlay textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.addQuoteOverlay textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.addQuoteOverlay input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.addQuoteOverlay input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.addQuoteOverlay button[type="submit"] {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0a0a1a;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.addQuoteOverlay button[type="submit"]:hover {
+  background: white;
+}
+
+.addQuoteOverlay button[type="button"] {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  cursor: pointer;
+  align-self: center;
+}
+
+.addQuoteOverlay button[type="button"]:hover {
+  color: white;
+}
+
+.addQuoteOverlay p {
+  color: #ff8080;
+  font-size: 0.85rem;
+  margin: 0;
+}

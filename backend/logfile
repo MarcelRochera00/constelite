@@ -95,3 +95,22 @@
 2026-09-21 19:27:09.051 CEST [3700] LOG:  database system is ready to accept connections
 2026-09-21 19:52:09.518 CEST [3704] LOG:  checkpoint starting: time
 2026-09-21 19:52:12.058 CEST [3704] LOG:  checkpoint complete: wrote 25 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=2.521 s, sync=0.003 s, total=2.541 s; sync files=25, longest=0.001 s, average=0.001 s; distance=38 kB, estimate=38 kB; lsn=0/25D37C0, redo lsn=0/25D3768
+2026-09-27 12:45:09.247 CEST [12279] FATAL:  lock file "postmaster.pid" already exists
+2026-09-27 12:45:09.247 CEST [12279] HINT:  Is another postmaster (PID 3700) running in data directory "/home/marcel/miniconda3/pgdata"?
+2026-09-27 12:45:37.360 CEST [12444] FATAL:  lock file "postmaster.pid" already exists
+2026-09-27 12:45:37.360 CEST [12444] HINT:  Is another postmaster (PID 3700) running in data directory "/home/marcel/miniconda3/pgdata"?
+2026-09-27 12:47:12.238 CEST [12731] FATAL:  lock file "postmaster.pid" already exists
+2026-09-27 12:47:12.238 CEST [12731] HINT:  Is another postmaster (PID 3700) running in data directory "/home/marcel/miniconda3/pgdata"?
+2026-09-27 12:50:08.724 CEST [13023] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-27 12:50:08.724 CEST [13023] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-27 12:50:08.726 CEST [13023] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-27 12:50:08.737 CEST [13029] LOG:  database system was interrupted; last known up at 2026-09-21 19:52:12 CEST
+2026-09-27 12:50:08.894 CEST [13029] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-09-27 12:50:08.898 CEST [13029] LOG:  redo starts at 0/25D3768
+2026-09-27 12:50:08.898 CEST [13029] LOG:  invalid record length at 0/25D3870: expected at least 24, got 0
+2026-09-27 12:50:08.898 CEST [13029] LOG:  redo done at 0/25D3838 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-09-27 12:50:08.902 CEST [13027] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-09-27 12:50:08.908 CEST [13027] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/25D3870, redo lsn=0/25D3870
+2026-09-27 12:50:08.911 CEST [13023] LOG:  database system is ready to accept connections
+2026-09-27 12:55:09.008 CEST [13027] LOG:  checkpoint starting: time
+2026-09-27 12:55:09.124 CEST [13027] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.001 s, total=0.117 s; sync files=1, longest=0.001 s, average=0.001 s; distance=6 kB, estimate=6 kB; lsn=0/25D50D0, redo lsn=0/25D5078
