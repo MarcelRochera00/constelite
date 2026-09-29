@@ -6,6 +6,7 @@ import './App.css'
 
 function App() {
   const [books, setBooks] = useState([])
+  const [authors, setAuthors] = useState([])
   const [error, setError] = useState(null)
   const [activeOverlay, setActiveOverlay] = useState(null)
 
@@ -16,8 +17,19 @@ function App() {
       .catch(err => setError(err.message))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:3000/authors')
+      .then(res => res.json())
+      .then(data => setAuthors(data))
+      .catch(err => setError(err.message))
+  }, [])
+
   const handleBookAdded = (newBook) => {
     setBooks(prevBooks => [...prevBooks, newBook])
+  }
+
+  const handleAuthorAdded = (newAuthor) => {
+    setAuthors(prevAuthors => [...prevAuthors, newAuthor])
   }
 
   const handleQuoteAdded = (newQuote) => {
@@ -47,6 +59,7 @@ function App() {
       {activeOverlay === 'addQuote' && (
         <AddQuoteOverlay
           books={books}
+          authors={authors}
           onQuoteAdded={handleQuoteAdded}
           onClose={() => setActiveOverlay(null)}
         />

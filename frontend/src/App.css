@@ -234,3 +234,22 @@ div.float-tooltip-kap {
 .book-suggestions li:hover {
   background: rgba(255, 255, 255, 0.08);
 }
+
+.author-search {
+  position: relative;
+}
+
+.new-book-fields {
+  margin-top: 4px;
+}
+
+.create-new-option {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.create-new-option:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}

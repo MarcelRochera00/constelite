@@ -130,3 +130,41 @@
 2026-09-27 22:35:51.916 CEST [6495] LOG:  database system is ready to accept connections
 2026-09-27 22:40:52.005 CEST [6499] LOG:  checkpoint starting: time
 2026-09-27 22:40:52.526 CEST [6499] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.002 s, total=0.522 s; sync files=7, longest=0.001 s, average=0.001 s; distance=12 kB, estimate=12 kB; lsn=0/25D8248, redo lsn=0/25D81B8
+2026-09-27 23:11:08.046 CEST [6495] LOG:  received fast shutdown request
+2026-09-27 23:11:08.059 CEST [6495] LOG:  aborting any active transactions
+2026-09-27 23:11:08.059 CEST [6888] FATAL:  terminating connection due to administrator command
+2026-09-27 23:11:08.059 CEST [6885] FATAL:  terminating connection due to administrator command
+2026-09-27 23:11:08.063 CEST [6495] LOG:  background worker "logical replication launcher" (PID 6504) exited with exit code 1
+2026-09-27 23:11:08.065 CEST [6499] LOG:  shutting down
+2026-09-27 23:11:08.066 CEST [6499] LOG:  checkpoint starting: shutdown immediate
+2026-09-27 23:11:08.070 CEST [6499] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.006 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=10 kB; lsn=0/25D82F8, redo lsn=0/25D82F8
+2026-09-27 23:11:08.091 CEST [6495] LOG:  database system is shut down
+2026-09-29 21:06:23.756 CEST [11060] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-29 21:06:23.757 CEST [11060] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-29 21:06:23.758 CEST [11060] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-29 21:06:23.765 CEST [11066] LOG:  database system was shut down at 2026-09-27 23:11:08 CEST
+2026-09-29 21:06:23.770 CEST [11060] LOG:  database system is ready to accept connections
+2026-09-29 21:11:23.786 CEST [11064] LOG:  checkpoint starting: time
+2026-09-29 21:11:23.809 CEST [11064] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.023 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/25D8400, redo lsn=0/25D83A8
+2026-09-29 21:50:45.200 CEST [4144] LOG:  starting PostgreSQL 18.6 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 15.3.0-4) 15.3.0, 64-bit
+2026-09-29 21:50:45.201 CEST [4144] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-29 21:50:45.203 CEST [4144] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-09-29 21:50:45.212 CEST [4150] LOG:  database system was interrupted; last known up at 2026-09-29 21:11:23 CEST
+2026-09-29 21:50:45.377 CEST [4150] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-09-29 21:50:45.381 CEST [4150] LOG:  redo starts at 0/25D83A8
+2026-09-29 21:50:45.381 CEST [4150] LOG:  invalid record length at 0/25D84B0: expected at least 24, got 0
+2026-09-29 21:50:45.381 CEST [4150] LOG:  redo done at 0/25D8478 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-09-29 21:50:45.385 CEST [4148] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-09-29 21:50:45.391 CEST [4148] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.008 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/25D84B0, redo lsn=0/25D84B0
+2026-09-29 21:50:45.395 CEST [4144] LOG:  database system is ready to accept connections
+2026-09-29 22:25:45.771 CEST [4148] LOG:  checkpoint starting: time
+2026-09-29 22:25:46.907 CEST [4148] LOG:  checkpoint complete: wrote 11 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.105 s, sync=0.015 s, total=1.137 s; sync files=12, longest=0.013 s, average=0.002 s; distance=17 kB, estimate=17 kB; lsn=0/25DCB58, redo lsn=0/25DCAC8
+2026-09-29 22:30:45.926 CEST [4148] LOG:  checkpoint starting: time
+2026-09-29 22:30:46.865 CEST [4148] LOG:  checkpoint complete: wrote 9 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.919 s, sync=0.003 s, total=0.939 s; sync files=10, longest=0.001 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/25E0F88, redo lsn=0/25E0F30
+2026-09-29 22:43:03.805 CEST [4144] LOG:  received fast shutdown request
+2026-09-29 22:43:03.818 CEST [4144] LOG:  aborting any active transactions
+2026-09-29 22:43:03.822 CEST [4144] LOG:  background worker "logical replication launcher" (PID 4153) exited with exit code 1
+2026-09-29 22:43:03.822 CEST [4148] LOG:  shutting down
+2026-09-29 22:43:03.823 CEST [4148] LOG:  checkpoint starting: shutdown immediate
+2026-09-29 22:43:03.826 CEST [4148] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.005 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=15 kB; lsn=0/25E1038, redo lsn=0/25E1038
+2026-09-29 22:43:03.844 CEST [4144] LOG:  database system is shut down
